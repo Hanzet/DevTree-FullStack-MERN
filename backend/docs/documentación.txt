@@ -1,0 +1,20 @@
+1. Instalar Package.json: npm init
+2. Instalar Express: npm i express
+
+3. Instalar Nodemon: npm i -D nodemon
+4. Instalar TypeScript en Node.Js: npm i -D typescript ts-node
+5. Instalar Dependencia de desarrollo de TypeScript: npm i --save-dev @types/express
+
+6. Instalar ODM Mongoose: npm i mongoose
+7. Esta librería facilita la gestión de variables de entorno: npm i dotenv
+
+8. Instalr Colors para
+9. Instalar bcrypt para Hash la contraseña: npm i bcrypt
+9.1 Instalar soportes para autocompletado bcrypt: npm i --save-dev @types/bcrypt
+
+10. Instalar la libreria de Slug y Types: npm i slug, npm i --save-dev @types/slug
+11. Instalar Express validator para el tema de validaciones: npm i express-validator
+
+12. Instalar CORS: npm i cors, npm i -D @types/cors
+
+13. Instalar JWT: npm i jsonwebtoken, npm i -D @types/jsonwebtoken
