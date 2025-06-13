@@ -2,6 +2,7 @@ import slug from "slug";
 import User from "../models/User";
 import { validationResult } from "express-validator";
 import { checkPassword, hashPassword } from "../utils/auth";
+import { generateJWT } from "../utils/jwt";
 
 export const createAccount = async (req, res) => {
     const { default: slug } = await import('slug');
@@ -62,5 +63,7 @@ export const login = async (req, res) => {
         return res.status(401).json({ error: error.message });
     }
 
-    res.send('Usuario autenticado correctamente');
+    const token = generateJWT({id: user._id})
+
+    res.send(token);
 }

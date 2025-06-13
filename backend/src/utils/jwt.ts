@@ -1,9 +1,17 @@
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 
-export const generateToken = (id: string) => {
-    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+export const generateJWT = (payload: JwtPayload) => {
+    const token = jwt.sign(payload, process.env.JWT_SECRET, {
+        expiresIn: '180d'
+    })
+    return token
 }
 
-export const verifyToken = (token: string) => {
-    return jwt.verify(token, process.env.JWT_SECRET);
+export const verifyJWT = (token: string) => {
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        return decoded;
+    } catch (error) {
+        throw new Error(`Error al verificar el token JWT: ${error.message}`);
+    }
 }

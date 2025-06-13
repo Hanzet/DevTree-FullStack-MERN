@@ -18,3 +18,9 @@
 12. Instalar CORS: npm i cors, npm i -D @types/cors
 
 13. Instalar JWT: npm i jsonwebtoken, npm i -D @types/jsonwebtoken
+
+
+FRONT:
+
+1. Instalar Hero Icons: npm i @heroicons/react
+2. Instalar Dependencia para formularios con tailwind Css: npm i -D @tailwindcss/forms
